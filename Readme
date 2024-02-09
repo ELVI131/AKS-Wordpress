@@ -1,3 +1,6 @@
+kubectl create secret generic mysql-pass --from-literal=password=yourpasswprd
+
+
 kubectl create -f mysql.yaml 
 kubectl create -f wordpress.yaml 
 kubectl apply -f .... ---------> when changes are made
@@ -8,3 +11,9 @@ or for more details
 run:
 
 kubectl get deployment,pod,svc,endpoints,pvc -l app=wordpress -o wide && kubectl get secret mysql-pass && kubectl get pv
+
+
+
+Run the following command to delete your Secret, Deployments, Services and PersistentVolumeClaims:
+
+kubectl delete -k ./
