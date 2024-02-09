@@ -1,0 +1,10 @@
+kubectl create -f mysql.yaml 
+kubectl create -f wordpress.yaml 
+kubectl apply -f .... ---------> when changes are made
+kubectl get service
+or
+kubectl get pods
+or for more details
+run:
+
+kubectl get deployment,pod,svc,endpoints,pvc -l app=wordpress -o wide && kubectl get secret mysql-pass && kubectl get pv
